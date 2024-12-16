@@ -2,6 +2,7 @@ import 'package:awesomeappp/screen/about_screen.dart';
 import 'package:awesomeappp/service/movie.dart';
 import 'package:flutter/material.dart';
 import 'package:awesomeappp/screen/detail_screen.dart';
+import 'package:awesomeappp/screen/galeri_screen.dart';
 import 'package:awesomeappp/screen/camera_screen.dart';
 // import 'package:awesomeappp/screen/home_screen.dart';
 // import 'package:awesomeappp/screen/login_screen.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         if (settings.name == '/'){
           // return MaterialPageRoute(builder: (context) => const LoginScreen());
           // return MaterialPageRoute(builder: (context) => const HomeScreen());
-          return MaterialPageRoute(builder: (context) => const CameraScreen());
+          return MaterialPageRoute(builder: (context) => const GaleriScreen());
         }
         if (settings.name == '/detail'){
           final movie = settings.arguments as Movie;
@@ -34,6 +35,9 @@ class MyApp extends StatelessWidget {
         }
         if (settings.name == '/about'){
           return MaterialPageRoute(builder: (context) => const AboutScreen());
+        }
+        if (settings.name == '/camera'){
+          return MaterialPageRoute(builder: (context) => const CameraScreen());
         }
         return null;
       },
